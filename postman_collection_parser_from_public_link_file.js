@@ -1,5 +1,5 @@
 const fs = require('fs');
-const monJson = JSON.parse(fs.readFileSync('./SCT.postman_collection_full.json', 'utf8'));
+const monJson = JSON.parse(fs.readFileSync('./SCT.postman_collection_full_2.json', 'utf8'));
 
 const domaine = '';
 

@@ -16,7 +16,7 @@ monJson.requests.map(request => {
         "name": request.name,
         "description": request.description,
         "url": domaine + request.url.replace('\\', '').replace(/^.*\/\/[^\/]+/, ''),
-        "authentication required": isAuthRequired(request.headerData),
+        "authenticationRequired": isAuthRequired(request.headerData),
         "method": request.method,
         "header": request.headerData.map(e => {
             return {
@@ -44,6 +44,8 @@ result = output.reduce(function (accumulator, currentObj) {
     accumulator[currentObj.entity].push(currentObj);
     return accumulator;
 }, Object.create(null));
+
+
 
 console.log(JSON.stringify(result, null, 1));
 // console.log(JSON.stringify(result[0], null, 1));

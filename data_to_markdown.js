@@ -49,9 +49,10 @@ for (const entity in data) {
         output += "| Key | Required | Default | Type | Description |\n"
         output += "| --- | --- | --- | --- | --- |\n"
 
-        for (const property in data[entity][request].body) {
-            output += `| ${data[entity][request].body[property].key} | unspecified | unspecified | ${data[entity][request].body[property].type} | ${data[entity][request].body[property].description} |\n`
-        }
+        if (typeof(data[entity][request].body) != "string")
+            for (const property in data[entity][request].body) {
+                output += `| ${data[entity][request].body[property].key} | unspecified | unspecified | ${data[entity][request].body[property].type} | ${data[entity][request].body[property].description} |\n`
+            }
 
         output += "\n---\n\n";  // Request separator
     }

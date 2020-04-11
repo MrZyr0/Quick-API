@@ -33,7 +33,7 @@ for (const entity in data) {
     output += "\n";
 
     for (const request in data[entity]) {
-        output += `## ${data[entity][request].name}\n`;
+        output += `### ${data[entity][request].name}\n`;
         output += "\n";
 
         output += data[entity][request].description != "" ?

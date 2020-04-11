@@ -112,3 +112,7 @@ temp/
 
 # Doesn't want to publish data
 *.json
+*.md
+!README.md
+!CHANGELOG.md
+!LICENSE.md
